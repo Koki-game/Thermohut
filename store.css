@@ -19,3 +19,39 @@
 @media(max-width:620px){.announcement-row{justify-content:center}.announcement-row>span{display:none}.container{width:calc(100% - 32px)}.header-inner{min-height:69px}.nav{top:69px}.header-call{display:none}.brand-copy strong{font-size:19px}.hero-grid{padding:54px 0 58px}.hero h1{font-size:clamp(31px,8vw,43px)}.hero p{font-size:13px}.hero-actions .btn{flex-grow:1}.hero-benefits{gap:11px;font-size:11px}.info-strip{grid-template-columns:1fr;margin-top:0;border-radius:0 0 15px 15px;padding:10px 20px}.info-strip>div{border-bottom:1px solid var(--border);padding:10px 0}.info-strip>div:last-child{border:0}.categories-section,.seo-section{padding:60px 0}.section-title{display:block}.category-cards{grid-template-columns:1fr}.category-card{min-height:234px}.category-icon{margin:15px 0}.catalog-section{padding:58px 0}.products{gap:10px}.product-visual{height:119px}.product-symbol{height:65px;width:65px;font-size:33px;border-radius:19px}.product-info{padding:12px}.product-kind{font-size:9px}.product-info h3{font-size:13px;min-height:38px}.product-desc{font-size:10px;min-height:84px}.product-button{font-size:10px}.seo-grid h2{font-size:30px}.service-banner{padding:48px 0}.service-banner h2{font-size:27px}.footer-links{gap:13px}.parts-hero-inner{padding:55px 0}.parts-hero h1{font-size:clamp(30px,8vw,42px)}.parts-grid{grid-template-columns:1fr}.parts-info-grid{margin-top:50px}.parts-content{padding:52px 0}}
 @media(max-width:360px){.products{grid-template-columns:1fr}.product-desc{min-height:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
+/* ThermoHut v5: navigation 3-step: brands -> part categories -> products */
+.brand-section{background:#f5f8f9;padding:65px 0 82px}
+.brand-section h2,.brand-page h2,.part-selected h2{font-size:clamp(26px,3vw,37px);margin:0 0 13px}
+.brand-lead{margin:0 0 23px;color:#627385;max-width:780px}
+.brand-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.brand-tile{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;text-align:center;min-height:134px;border-radius:18px;padding:17px 10px;background:#fff;border:1px solid #e2e9ed;box-shadow:0 7px 22px #182e4110;transition:transform .15s,box-shadow .15s}
+.brand-tile:hover,.part-tile:hover{transform:translateY(-3px);box-shadow:0 13px 27px #12273c21}
+.brand-word{font-size:clamp(17px,2.2vw,24px);font-weight:900;line-height:1.2;overflow-wrap:anywhere;color:var(--brand-color,#183044)}
+.brand-token{width:40px;height:5px;border-radius:20px;background:var(--brand-color,#183044)}
+.brand-caption{font-size:11px;color:#607586;font-weight:650}
+.brand-page,.part-selected{padding:56px 0 82px;background:#f6f9fa;min-height:55vh}
+.crumbs{display:flex;gap:7px;align-items:center;flex-wrap:wrap;color:#627485;font-size:12px;font-weight:700;margin-bottom:21px}
+.crumbs a{color:#166f74;text-decoration:underline;text-underline-offset:3px}
+.page-heading{background:#fff;padding:26px;border:1px solid #e2e8ec;border-radius:20px;margin-bottom:29px}
+.page-heading .brand-word{font-size:31px;display:inline-block;margin-bottom:9px}
+.page-heading p{color:#627385;max-width:850px;margin:0 0 11px}
+.page-heading .important{font-size:12px;color:#97642f}
+.part-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.part-tile{border:1px solid #e1e8ec;background:white;border-radius:15px;display:flex;align-items:center;gap:15px;min-height:94px;padding:17px;transition:transform .15s,box-shadow .15s}
+.part-tile .part-symbol{font-size:27px;display:grid;place-items:center;background:#f0f7f6;border-radius:13px;width:52px;height:52px;flex:0 0 52px}
+.part-tile strong{font-size:14px;line-height:1.45;display:block;color:#1c3445}
+.part-tile small{font-size:11px;color:#738391}
+.awaiting-products{border:1px dashed #b9ccd2;background:#fff;border-radius:18px;padding:29px 25px;max-width:790px;margin:22px 0 35px}
+.awaiting-products strong{font-size:20px;color:#20384a}.awaiting-products p{color:#607385;font-size:14px;margin-top:9px}
+.brand-products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:20px 0 32px}
+.brand-product{background:#fff;border:1px solid #e1e8ed;border-radius:16px;overflow:hidden}
+.brand-product img{width:100%;height:185px;object-fit:contain;background:#f6f9fa}
+.brand-product .body{padding:18px}.brand-product h3{font-size:16px;margin:0 0 9px}.brand-product p{font-size:12px;color:#607385}.brand-product .price{font-weight:850;color:#b55a2d}
+.brand-product .btn{margin-top:13px}
+.note-input{max-width:680px;width:100%;padding:14px;border-radius:10px;border:1px solid #cad9e1;font:inherit;margin:10px 0 18px;background:#fff}
+.order-feedback{font-size:12px;color:#0b756f;min-height:18px;margin-top:10px}
+.back-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.back-links .btn{font-size:13px}
+@media(max-width:960px){.brand-grid{grid-template-columns:repeat(3,1fr)}.part-categories{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.brand-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.brand-tile{min-height:121px}.brand-word{font-size:18px}.brand-section,.brand-page,.part-selected{padding:42px 0 60px}.page-heading{padding:19px}.part-categories{grid-template-columns:1fr}.part-tile{min-height:74px}.brand-products{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:390px){.brand-products{grid-template-columns:1fr}}

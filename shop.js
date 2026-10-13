@@ -12,11 +12,11 @@ function store(){try{localStorage.setItem('thermohut-inquiry-v4',JSON.stringify(
 function change(id,diff){if(!list.some(p=>p.id===id))return;const n=Math.max(0,Math.min(99,(cart[id]||0)+diff));if(n)cart[id]=n;else delete cart[id];store();renderCart();}
 function filterCategory(next){category=Object.prototype.hasOwnProperty.call(labels,next)?next:'all';document.querySelectorAll('[data-cat]').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.cat===category)));renderProducts();}
 function renderProducts(){
- const q=search.value.trim().toLocaleLowerCase('ka');const filtered=list.filter(p=>(category==='all'||p.category===category)&&(!q||[p.name,p.description,p.keywords,p.subCategory].join(' ').toLocaleLowerCase('ka').includes(q)));
+ const q=search.value.trim().toLocaleLowerCase('ka');const filtered=list.filter(p=>p.category!=='parts'&&(category==='all'||p.category===category)&&(!q||[p.name,p.description,p.keywords,p.subCategory].join(' ').toLocaleLowerCase('ka').includes(q)));
  grid.replaceChildren();$('noResults').hidden=filtered.length!==0;$('resultCount').textContent=filtered.length+' დასახელება';
  for(const p of filtered){
   const card=node('article','product-card'),visual=node('div','product-visual'),body=node('div','product-info');
-  if(p.image&&/^images\/[a-zA-Z0-9_./-]+\.(jpg|jpeg|png|webp)$/i.test(p.image)){const img=node('img');img.src=p.image;img.alt=p.name;img.loading='lazy';visual.appendChild(img);}else{visual.appendChild(node('span','product-symbol',p.symbol||'⚙'));visual.appendChild(node('span','visual-label','საორიენტაციო კატალოგი'));}
+  if(p.image&&/^(?:images\/)?[a-zA-Z0-9_./-]+\.(jpg|jpeg|png|webp)$/i.test(p.image)){const img=node('img');img.src=p.image;img.alt=p.name;img.loading='lazy';visual.appendChild(img);}else{visual.appendChild(node('span','product-symbol',p.symbol||'⚙'));visual.appendChild(node('span','visual-label','საორიენტაციო კატალოგი'));}
   body.append(node('div','product-kind',p.subCategory||labels[p.category]||'კატალოგი'),node('h3','',p.name),node('p','product-desc',p.description));
   const price=(typeof p.priceGEL==='number'&&Number.isFinite(p.priceGEL)&&p.priceGEL>=0)?p.priceGEL.toFixed(2)+' ₾':'ფასი დასაზუსტებელია';
   body.appendChild(node('div','product-price',price));
@@ -34,7 +34,7 @@ function renderCart(){const box=$('cartItems');box.replaceChildren();let total=0
  }
  $('cartCount').textContent=String(total);$('cartEmpty').hidden=total>0;$('copyInquiry').disabled=total===0;
 }
-document.querySelectorAll('[data-cat]').forEach(btn=>btn.addEventListener('click',()=>{filterCategory(btn.dataset.cat);const u=new URL(window.location.href);if(category==='all')u.searchParams.delete('category');else u.searchParams.set('category',category);history.replaceState(null,'',u.pathname+u.search+u.hash);}));
+document.querySelectorAll('[data-cat]').forEach(btn=>btn.addEventListener('click',()=>{if(btn.dataset.cat==='parts'){window.location.href='boiler-parts.html';return;}filterCategory(btn.dataset.cat);const u=new URL(window.location.href);if(category==='all')u.searchParams.delete('category');else u.searchParams.set('category',category);history.replaceState(null,'',u.pathname+u.search+u.hash);}));
 search.addEventListener('input',renderProducts);
 $('clearCart').addEventListener('click',()=>{for(const id of Object.keys(cart))delete cart[id];store();renderCart();status.textContent='მოთხოვნის სია გასუფთავებულია.';});
 $('copyInquiry').addEventListener('click',async()=>{
@@ -47,5 +47,5 @@ $('copyInquiry').addEventListener('click',async()=>{
  if(!ok){try{const t=node('textarea');t.value=text;t.style.position='fixed';t.style.left='-9999px';document.body.appendChild(t);t.select();ok=document.execCommand('copy');t.remove();}catch(e){}}
  status.textContent=ok?'მოთხოვნა დაკოპირებულია. ახლა დაუკავშირდით ThermoHut-ს.':'კოპირება ვერ შესრულდა. დაგვირეკეთ ტელეფონით.';
 });
-restore();filterCategory(new URLSearchParams(window.location.search).get('category')||'all');renderCart();
+restore();const initialCategory=new URLSearchParams(window.location.search).get('category')||'all';if(initialCategory==='parts'){window.location.replace('boiler-parts.html');return;}filterCategory(initialCategory);renderCart();
 })();
