@@ -1,33 +1,34 @@
-THERMOHUT — SEO v2 (GitHub Pages)
-==================================
+THERMOHUT — v3 საიტი + საწყისი მაღაზია
+=======================================
+GitHub: https://github.com/Koki-game/Thermohut
+არსებული მისამართი: https://koki-game.github.io/Thermohut/
+მაღაზია: https://koki-game.github.io/Thermohut/shop.html
 
-GitHub repository: Koki-game/Thermohut
-Expected public URL: https://koki-game.github.io/Thermohut/
+როგორ ატვირთოთ Android ტელეფონით GitHub-ზე:
+1. ჩამოტვირთეთ ZIP და ამოარქივეთ.
+2. GitHub-ში შედით Koki-game / Thermohut / main რეპოზიტორიაში.
+3. აირჩიეთ Add file -> Upload files.
+4. ატვირთეთ ამ საქაღალდის შიგნით მყოფი ყველა ფაილი პირდაპირ რეპოზიტორიის მთავარ დონეზე (ROOT).
+   არ ატვირთოთ მხოლოდ ZIP ფაილი და არ დატოვოთ ფაილები ქვეფოლდერში.
+5. GitHub-ის Commit changes დააჭირეთ.
+6. შეამოწმეთ მთავარი გვერდი და shop.html. Pages-ის გამოქვეყნება შესაძლოა ოდნავ დაგვიანდეს.
 
-Files to put in the repository ROOT (not inside a folder):
-- index.html (REPLACE the current file)
-- favicon.svg (keep/replace)
-- sitemap.xml (NEW)
-- robots.txt (keep/replace if desired)
+შედის:
+- index.html — მთავარი გვერდი, მომსახურებები, მაღაზიის ბმული
+- shop.html — დამოუკიდებელი კატალოგის გვერდი
+- styles.css — დიზაინი ორივე გვერდისთვის
+- products.js — 14 საწყისი, საორიენტაციო დასახელება (ფასი/მარაგი დაუდასტურებელია)
+- shop.js — ძებნა, კატეგორიები, მოთხოვნის სია, კოპირება
+- sitemap.xml — მთავარი და მაღაზიის გვერდები
+- robots.txt, favicon.svg, googleeb4b3f092ecab129.html — Google-ისა და საიტის არსებული ფაილები
 
-Changes made:
-- Georgian title, description, canonical and OG URL
-- Main page H1 targets 'გათბობის ქვაბის ხელოსანი თბილისში'
-- More natural, useful Georgian local service content
-- HVACBusiness schema with page URL and consistent details
-- Sitemap for Google Search Console
-- Correct favicon path at repo root
-- Existing design, buttons and existing brand list untouched
+SEO: მთავარი გვერდის canonical URL, H1, მეტა აღწერა და HVACBusiness JSON-LD შენარჩუნებულია.
+Google-ის ვერიფიკაციის ფაილიც შენარჩუნებულია. shop.html-ზე დამატებულია ინდექსირებადი canonical URL.
 
-After publication:
-1) Open the LIVE URL and check title, phone button and favicon.
-2) Open Google Search Console and add URL-prefix property for the exact site URL.
-3) Verify ownership using Google's current supported method.
-4) Use URL Inspection to request indexing of the home URL.
-5) Submit sitemap at https://koki-game.github.io/Thermohut/sitemap.xml
-6) Add the website link in your verified Google Business Profile; do not change category.
-
-IMPORTANT: GitHub project-pages /Thermohut/robots.txt is not the host's
-root robots.txt, so Search Console sitemap submission is the reliable way
-to tell Google about this sitemap. Ranking in Google Search and Google
-Maps is not guaranteed and can take time.
+მნიშვნელოვანი:
+- ეს ვერსია შეიცავს ძველი საიტის სტილზე აგებულ განახლებულ მთავარ გვერდს.
+- პროდუქტის დასახელებები არის საწყისი კატალოგის შაბლონები და არა დადასტურებული გაყიდვადი მარაგი.
+- საწყის პროდუქტებს ჯერ არ აქვთ ნამდვილი ფოტოები და ფასები; ფიქტიური ფასები არ დაგვიმატებია.
+- კალათა ინახება მომხმარებლის ბრაუზერში. კოპირება შეკვეთას არ აგზავნის — საიტს გადახდა ან სერვერის შეკვეთები ამ ეტაპზე არ აქვს.
+- რეალური ონლაინ-გადახდები შემდგომში მოითხოვს შესაბამის გადახდის სისტემას/სერვერს და უსაფრთხო ინტეგრაციას.
+- Google-ში შედეგების გაჩენა და პოზიციები გარანტირებული არ არის.
