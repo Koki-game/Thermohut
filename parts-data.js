@@ -1,4 +1,4 @@
-/* Brand/category navigation. Brand-specific inventory will be added after real photos and prices are supplied. */
+/* ThermoHut — ბრენდების და კატეგორიების მენიუ */
 window.THERMOHUT_PARTS_DATA = {
   "brands": [
     {
@@ -133,6 +133,111 @@ window.THERMOHUT_PARTS_DATA = {
       "color": "#1d7b9a",
       "light": "#eff7fd",
       "url": "brand-auer.html"
+    },
+    {
+      "id": "baxi",
+      "name": "Baxi",
+      "color": "#3a6481",
+      "light": "#f1f5f6",
+      "url": "brand-baxi.html"
+    },
+    {
+      "id": "biasi",
+      "name": "Biasi",
+      "color": "#546579",
+      "light": "#f1f5f6",
+      "url": "brand-biasi.html"
+    },
+    {
+      "id": "chaffoteaux",
+      "name": "Chaffoteaux",
+      "color": "#59646f",
+      "light": "#f1f5f6",
+      "url": "brand-chaffoteaux.html"
+    },
+    {
+      "id": "demrad",
+      "name": "Demrad",
+      "color": "#66817b",
+      "light": "#f1f5f6",
+      "url": "brand-demrad.html"
+    },
+    {
+      "id": "fondital",
+      "name": "Fondital",
+      "color": "#3a6481",
+      "light": "#f1f5f6",
+      "url": "brand-fondital.html"
+    },
+    {
+      "id": "heatline",
+      "name": "Heatline",
+      "color": "#546579",
+      "light": "#f1f5f6",
+      "url": "brand-heatline.html"
+    },
+    {
+      "id": "hermann",
+      "name": "Hermann",
+      "color": "#59646f",
+      "light": "#f1f5f6",
+      "url": "brand-hermann.html"
+    },
+    {
+      "id": "italtherm",
+      "name": "Italtherm",
+      "color": "#66817b",
+      "light": "#f1f5f6",
+      "url": "brand-italtherm.html"
+    },
+    {
+      "id": "junkers",
+      "name": "Junkers",
+      "color": "#3a6481",
+      "light": "#f1f5f6",
+      "url": "brand-junkers.html"
+    },
+    {
+      "id": "navien",
+      "name": "Navien",
+      "color": "#546579",
+      "light": "#f1f5f6",
+      "url": "brand-navien.html"
+    },
+    {
+      "id": "other",
+      "name": "სხვა ბრენდები",
+      "color": "#59646f",
+      "light": "#f1f5f6",
+      "url": "brand-other.html"
+    },
+    {
+      "id": "roca",
+      "name": "Roca",
+      "color": "#66817b",
+      "light": "#f1f5f6",
+      "url": "brand-roca.html"
+    },
+    {
+      "id": "sime",
+      "name": "Sime",
+      "color": "#3a6481",
+      "light": "#f1f5f6",
+      "url": "brand-sime.html"
+    },
+    {
+      "id": "unical",
+      "name": "Unical",
+      "color": "#546579",
+      "light": "#f1f5f6",
+      "url": "brand-unical.html"
+    },
+    {
+      "id": "warmahaus",
+      "name": "Warmahaus",
+      "color": "#59646f",
+      "light": "#f1f5f6",
+      "url": "brand-warmahaus.html"
     }
   ],
   "categories": [

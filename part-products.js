@@ -21,10 +21,10 @@
   function makeOrder(){
     const lines=['გამარჯობა, ThermoHut! მინდა შემდეგი ნაწილის ფასი და ხელმისაწვდომობა დავაზუსტო:', 'ქვაბის ბრენდი: '+brand.name,'ნაწილის კატეგორია: '+category.name];
     let has=false;
-    for(const p of filtered){if(cart[p.id]){has=true;lines.push('• '+p.name+' — '+cart[p.id]+' ც.');}}
+    for(const p of filtered){if(cart[p.id]){has=true;lines.push('• '+p.name+' — '+p.priceGEL+' ₾ × '+cart[p.id]+' ც.');}}
     if(!has) lines.push('გთხოვთ შემომთავაზოთ შესაბამისი ნაწილი.');
     if($('partModelNote').value.trim())lines.push('ქვაბის მოდელი / შენიშვნა: '+$('partModelNote').value.trim());
-    lines.push('გთხოვთ დამიდასტუროთ თავსებადობა და ფასი.');return lines.join('\n');
+    lines.push('გთხოვთ დამიდასტუროთ თავსებადობა, საბოლოო ფასი და ხელმისაწვდომობა.');return lines.join('\n');
   }
   async function copyInquiry(){const txt=makeOrder();let ok=false;
     try{if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(txt);ok=true;}}catch(e){}
@@ -36,7 +36,7 @@
   result.textContent=filtered.length+' პროდუქტი • თითოეულის თავსებადობა გადაამოწმეთ';
   for(const p of filtered){
     const card=el('article','brand-product');
-    if(p.image&&/^(?:images\/)?[a-z0-9_./-]+\.(?:jpg|jpeg|png|webp)$/i.test(p.image)&&!p.image.includes('..')){
+    if(p.image&&(/^(?:images\/)?[a-z0-9_./-]+\.(?:jpg|jpeg|png|webp)$/i.test(p.image)||/^data:image\/webp;base64,[a-z0-9+/=]+$/i.test(p.image))&&!p.image.includes('..')){
       const img=el('img');img.src=p.image;img.alt=p.name;img.loading='lazy';card.appendChild(img);
     }
     const body=el('div','body');body.append(el('h3','',p.name),el('p','',p.description||''));
