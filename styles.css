@@ -24,3 +24,11 @@ footer{background:#0b1828;color:#acbbc8;padding:28px 0;font-size:12px}.footer-gr
 @media(max-width:550px){.container{width:min(100% - 30px,1160px)}.topbar .hide-mobile{display:none}.topbar>.container{justify-content:center}.brandtext strong{font-size:19px}section{padding:60px 0}.cards{grid-template-columns:1fr}.card{padding:21px}.hero-actions{flex-direction:column;align-items:stretch}.artpanel{min-height:275px}.hero-proof{gap:8px 12px}.steps-row{grid-template-columns:1fr}.shophero-grid{padding:47px 0}.catalog{padding:36px 0 63px}.catalog-top h2{font-size:27px}.products{gap:10px}.product-image{height:107px}.product-body{padding:11px}.product h3{font-size:13px}.product p{min-height:49px}.categories{width:100%}.catbtn{padding:9px}.howto-grid{grid-template-columns:1fr}.contact-actions .btn{flex:1}.float-call{position:fixed;display:grid;place-items:center;right:17px;bottom:17px;z-index:60;width:57px;height:57px;border-radius:50%;background:var(--orange);color:#fff;box-shadow:0 12px 24px #f5793949;font-size:22px}footer{padding-bottom:86px}}
 @media(max-width:365px){.products{grid-template-columns:1fr}.product p{min-height:0}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* ThermoHut official blue / yellow logo, v9 */
+header .brand{flex-shrink:0;min-width:0;line-height:1}
+header .site-brand-logo{display:block;width:205px;height:auto;object-fit:contain}
+footer .service-footer-logo{display:block;width:169px;height:auto;background:white;padding:8px 11px;border-radius:10px;margin-bottom:9px;box-sizing:content-box}
+@media(max-width:1100px){header .site-brand-logo{width:188px}}
+@media(max-width:550px){header .site-brand-logo{width:183px}}
+@media(max-width:370px){header .site-brand-logo{width:160px}}
